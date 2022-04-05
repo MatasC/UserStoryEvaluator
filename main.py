@@ -14,7 +14,7 @@ import keras as keras
 import tflearn
 import tensorflow as tf
 
-# from tensorflow.keras.callbacks import TensorBoard
+from tensorflow.keras.callbacks import TensorBoard
 
 nlp = spacy.load('en_core_web_sm')
 
@@ -138,15 +138,3 @@ def get_response(written_story):
                 return tg['responses'][0]
 
     return "I'm sorry. Could you rephrase the question?"
-
-
-while True:
-    story = str(input("Enter a user story:"))
-    print(get_response(story))
-
-    # choice = str(input("enter 'yes' to try again - "))
-
-    # if choice == 'yes':
-    #     continue
-    # else:
-    #     break
