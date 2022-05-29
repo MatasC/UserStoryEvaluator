@@ -39,7 +39,7 @@ def read_stories(path):
     return text, names[choice]
 
 
-def manual_nlp(path):
+def prepare_doc_stories(path):
     text, file_name = read_stories(path)
 
     nlp = spacy.load('en_core_web_sm')
@@ -57,7 +57,30 @@ def manual_nlp(path):
         sents.append(new_doc)
         new_doc = []
 
-    sentence_spans = list(doc.sents)
+    file = open(file_name.split('.')[0] + '_new.txt', 'a')
+
+    for sent in sents:
+        sent = prepare_story(nlp(sent))
+        file.write(" ".join(sent).strip() + "\n")
+
+
+def manual_nlp(path):
+    text, file_name = read_stories(path)
+
+    nlp = spacy.load('en_core_web_sm')
+
+    doc = nlp(text)
+
+    new_doc = []
+    sents = []
+
+    for sent in doc.sents:
+        for word in sent:
+            if word.is_stop == False and word.is_punct == False:
+                new_doc.append(word.text)
+        new_doc = nlp(" ".join(new_doc).strip())
+        sents.append(new_doc)
+        new_doc = []
 
     options = {'distance': 150, 'compact': True}
 
@@ -100,6 +123,4 @@ def prepare_story(doc):
                     break
                 else:
                     t += 1
-
-    print(words)
     return [word.lower() for word in words]

@@ -97,6 +97,4 @@ As a researcher,  I want to have the ability to restrict the data I share to cer
 As a researcher,  I want to have the ability to locate and access data that colleagues want to share.
 As a researcher,  I want to have the ability to interact with a revision control system so that I can keep track of changes to files over time.
 As a JuniorResearcher,  I want to have the ability to harvest knowledge from within the group, so that I can learn from more experienced researchers.
-As a researcher, I want to secure remote access to the Neurohub node when working away from the laboratory
-As a researcher, I want to have a group-level repository for sharing papers/reviews/comments with other researchers.
 As a researcher, I want to have the details of the workflow plan as well as the execution history and results recorded in Neurohub while executing a workflow

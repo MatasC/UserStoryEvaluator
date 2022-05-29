@@ -44,8 +44,7 @@ As a repoadmin, I want to continue to provide access to the repository in the ev
 As a repoadmin, I want to provide the server SLA to data contributors.
 As a repoadmin, I want to update the repository index without disrupting access to the public interface.
 As a repoadmin, I want to provide a Linked Data interface to the repository.
-As a repoadmin, I want to have Symplectic Elements to communicate
-bidirectionally with the repository.
+As a repoadmin, I want to have Symplectic Elements to communicate bidirectionally with the repository.
 As a developer, I want to upgrade to Fedora 4 and migrate our applications and data.
 As a collection curator, I want to have metadata changes made to items with repository-assigned DOIs to be propagated to the EZID.
 As a collection curator, I want to canonically identify authors and creators of my items by unique identifier, so that it's easier to view all of the works by that person together.
